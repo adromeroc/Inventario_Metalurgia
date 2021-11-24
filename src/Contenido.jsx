@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contenido() {
 return <div>
-       <h2>Materia </h2>
+       <h2>Materia Prima</h2>
        <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>
