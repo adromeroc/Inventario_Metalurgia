@@ -12,6 +12,6 @@
     "PATH_PRODUCCION_DESPACHO": "/produccion/despacho",
     "PATH_REPORTE_MATERIAPRIMAMASVENDIDA": "/reporte/materia-prima-mas-vendida",
     "PATH_REPORTE_PRODUCTOSDISPONIBLES": "/reporte/productos-disponibles",
-    "PATH_REPORTE_PEDIDOSDESPACHAR": "/reporte/pedidos-por-despachar",
+    "PATH_REPORTE_PEDIDOSPORDESPACHAR": "/reporte/pedidos-por-despachar",
     "PATH_REPORTE_PEDIDOSDESPACHADOS": "/reporte/pedidos-despachados"
 }

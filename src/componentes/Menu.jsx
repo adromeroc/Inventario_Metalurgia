@@ -108,7 +108,7 @@ export default function Menu() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to={CONFIG.PATH_REPORTE_PEDIDOSDESPACHAR}>
+                            <Link className="nav-link" to={CONFIG.PATH_REPORTE_PEDIDOSPORDESPACHAR}>
                                 <span data-feather="file-text"></span>
                                 Pedidos por Despachar
                             </Link>

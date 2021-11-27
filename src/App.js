@@ -5,7 +5,20 @@ import Encabezado from './componentes/Encabezado';
 import Menu from './componentes/Menu';
 import Contenido from './componentes/Contenido';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import DefaultContentMensaje from './componentes/DefaultContentMensaje';
+import UsuarioRegistro from './componentes/usuario/UsuarioRegistro';
+import UsuarioGestion from './componentes/usuario/UsuarioGestion';
+import MateriaPrimaCrear from './componentes/materia-prima/MateriaPrimaCrear';
+import MateriaPrimaLista from './componentes/materia-prima/MateriaPrimaLista';
+import ProductoCrear from './componentes/producto/ProductoCrear';
+import ProductoLista from './componentes/producto/ProductoLista';
+import ProduccionSolicitud from './componentes/produccion/ProduccionSolicitud';
+import ProduccionDespacho from './componentes/produccion/ProduccionDespacho';
+import ProduccionOrden from './componentes/produccion/ProduccionOrden';
+import ProduccionSeguimiento from './componentes/produccion/ProduccionSeguimiento';
+import ReporteMateriaPrimaVendida from './componentes/reporte/ReporteMateriaPrimaVendida';
+import ReporteProductoDisponible from './componentes/reporte/ReporteProductoDisponible';
+import ReportePedidoPorDespachar from './componentes/reporte/ReportePedidoPorDespachar';
+import ReportePedidoDespachado from './componentes/reporte/ReportePedidoDespachado';
 
 export default function App() {
   return (
@@ -33,7 +46,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Registro Usuarios" />
+                    <UsuarioRegistro />
                   </main>
                 </Fragment>} />
 
@@ -41,7 +54,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Gestión Usuarios" />
+                    <UsuarioGestion />
                   </main>
                 </Fragment>} />
 
@@ -52,7 +65,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Crear materia prima" />
+                    <MateriaPrimaCrear />
                   </main>
                 </Fragment>} />
 
@@ -60,7 +73,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Lista de materias primas" />
+                    <MateriaPrimaLista />
                   </main>
                 </Fragment>} />
 
@@ -71,7 +84,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Crear productos" />
+                    <ProductoCrear />
                   </main>
                 </Fragment>} />
 
@@ -79,7 +92,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Lista de productos" />
+                    <ProductoLista />
                   </main>
                 </Fragment>} />
 
@@ -90,7 +103,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Orden de producción" />
+                    <ProduccionOrden />
                   </main>
                 </Fragment>} />
 
@@ -98,7 +111,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Solicitud de producción" />
+                    <ProduccionSolicitud />
                   </main>
                 </Fragment>} />
 
@@ -106,7 +119,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Seguimiento de producción" />
+                    <ProduccionSeguimiento />
                   </main>
                 </Fragment>} />
 
@@ -114,7 +127,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Despachos" />
+                    <ProduccionDespacho />
                   </main>
                 </Fragment>} />
 
@@ -126,7 +139,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Matería prima más vendida" />
+                    <ReporteMateriaPrimaVendida />
                   </main>
                 </Fragment>} />
 
@@ -134,15 +147,15 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Productos disponibles" />
+                    <ReporteProductoDisponible />
                   </main>
                 </Fragment>} />
 
-              <Route path={CONFIG.PATH_REPORTE_PEDIDOSDESPACHAR} element={
+              <Route path={CONFIG.PATH_REPORTE_PEDIDOSPORDESPACHAR} element={
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Pedidos por despachaar" />
+                    <ReportePedidoPorDespachar />
                   </main>
                 </Fragment>} />
 
@@ -150,7 +163,7 @@ export default function App() {
                 <Fragment>
                   <Menu />
                   <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                    <DefaultContentMensaje msg="Pedidos despachados" />
+                    <ReportePedidoDespachado />
                   </main>
                 </Fragment>} />
 
