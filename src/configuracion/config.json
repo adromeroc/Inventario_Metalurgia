@@ -1,0 +1,17 @@
+{
+    "NOMBRE_EMPRESA": "Metalurgica Ltda",
+    "PATH_USUARIO_REGISTRO": "/usuario/registro",
+    "PATH_USUARIO_GESTION": "/usuario/gestion",
+    "PATH_MATERIAPRIMA_CREAR": "/materia-prima/crear",
+    "PATH_MATERIAPRIMA_LISTA": "/materia-prima/lista",
+    "PATH_PRODUCTO_CREAR": "/producto/crear",
+    "PATH_PRODUCTO_LISTA": "/producto/lista",
+    "PATH_PRODUCCION_ORDEN": "/produccion/orden",
+    "PATH_PRODUCCION_SOLICITUD": "/produccion/solicitud",
+    "PATH_PRODUCCION_SEGUIMIENTO": "/produccion/seguimiento",
+    "PATH_PRODUCCION_DESPACHO": "/produccion/despacho",
+    "PATH_REPORTE_MATERIAPRIMAMASVENDIDA": "/reporte/materia-prima-mas-vendida",
+    "PATH_REPORTE_PRODUCTOSDISPONIBLES": "/reporte/productos-disponibles",
+    "PATH_REPORTE_PEDIDOSDESPACHAR": "/reporte/pedidos-por-despachar",
+    "PATH_REPORTE_PEDIDOSDESPACHADOS": "/reporte/pedidos-despachados"
+}
