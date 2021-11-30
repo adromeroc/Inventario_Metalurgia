@@ -13,7 +13,7 @@ export default function ProduccionSolicitud() {
                         <tr>
                             <th scope="col">Productos</th>
                             <th scope="col">Cantidades Solicitadas</th>
-                            <th scope="col" className="text-center">Acción</th>
+                            <th scope="col">Acción</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -22,7 +22,7 @@ export default function ProduccionSolicitud() {
                                 <td>150</td>
                                 <td>
                                     <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Producido" class="btn btn-success" />
+                                        <input type="submit" value="Producido" className="btn btn-success" />
                                     </form>
                                 </td>
                             </tr>
@@ -31,7 +31,7 @@ export default function ProduccionSolicitud() {
                                 <td>2000</td>
                                 <td>
                                     <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Producido" class="btn btn-success" />
+                                        <input type="submit" value="Producido" className="btn btn-success" />
                                     </form>
                                 </td>
                             </tr>
@@ -40,7 +40,7 @@ export default function ProduccionSolicitud() {
                                 <td>5000</td>
                                 <td>
                                     <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Producido" class="btn btn-success" />
+                                        <input type="submit" value="Producido" className="btn btn-success" />
                                     </form>
                                 </td>
                             </tr>

@@ -8,7 +8,7 @@ export default function Encabezado() {
         <Fragment>
             <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
                 <div>
-                    <img className="mb-4" alt="" width="62" height="47" src={logo} />
+                    <img className="mb-auto" alt="" width="72" height="57" src={logo} />
                     <a className="fs-4 navbar-brand bg-dark col-md-3 col-lg-2 me-0 px-3" href="/">{CONFIG.NOMBRE_EMPRESA}</a>
                 </div>
                 <ul className="nav nav-pills">

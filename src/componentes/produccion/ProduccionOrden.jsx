@@ -32,7 +32,7 @@ export default function ProduccionOrden() {
                                 </td>
                                 <td>
                                     <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Solicitar" class="btn btn-primary" />
+                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
                                     </form>
                                 </td>
                             </tr>
@@ -43,7 +43,7 @@ export default function ProduccionOrden() {
                                 </td>
                                 <td>
                                     <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Solicitar" class="btn btn-primary" />
+                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
                                     </form>
                                 </td>
                             </tr>
@@ -54,7 +54,7 @@ export default function ProduccionOrden() {
                                 </td>
                                 <td>
                                     <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Solicitar" class="btn btn-primary" />
+                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
                                     </form>
                                 </td>
                             </tr>
