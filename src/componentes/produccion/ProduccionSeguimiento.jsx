@@ -16,7 +16,7 @@ export default function ProduccionSeguimiento() {
 			<div className="container pt-3 pb-2 mb-3">
                 <div className="row">
                     <div className="table-responsive pt-3 pb-2 mb-3">
-                    <table className="table table-striped table-sm text-center">
+                    <table className="table table-secondary table-sm text-center">
                         <thead>
                         <tr>
                             <th scope="col">Productos</th>
