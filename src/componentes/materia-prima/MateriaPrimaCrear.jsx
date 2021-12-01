@@ -1,9 +1,10 @@
-import { Fragment, useRef } from "react";
+import { Fragment, useRef, useState } from "react";
 
 import DefaultContentMensaje from "../DefaultContentMensaje";
 
 export default function MateriaPrimaCrear() {
     let listado; 
+    const [success, setSuccess] = useState (false);
     const nomRef = useRef();
     const desRef = useRef();
     const canRef = useRef();
@@ -26,10 +27,15 @@ export default function MateriaPrimaCrear() {
         canRef.current.value = "";
         undRef.current.value = "";
         valorRef.current.value = "";
+        setSuccess(true); 
+        setInterval (()=>setSuccess(false), 2000)
 
     }
     return (
+            
         <Fragment>
+            {success && <div class="alert alert-success"
+             role="alert">Guardado con éxito </div> }
              <div className="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h2>MP - Módulo de creación</h2>
                 <form className="d-flex" action="" method="POST">
