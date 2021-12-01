@@ -1,17 +1,18 @@
 import { Fragment } from "react";
 import DefaultContentMensaje from "../DefaultContentMensaje";
-// import logo from '../image/Foto.jpg';
+import logo from '../../image/Foto.2.jpg';
 
 export default function UsuarioRegistro() {
     return (
         <Fragment>
-            <div className="container">
-                {/* <div>
-                    <img className="mb-4" alt="" width="140" height="100" src={logo} />
-                </div> */}
-                <div className="text-center">
-                    <br></br>
-                    <br></br>
+            <div className="text-center">
+            <div className="container-">
+                <br></br>
+                <br></br>
+                <div>
+                    <img className="mb-4" alt="" width="300" height="188" src={logo} />
+                </div>
+                <div className="text-center">  
                     <h3>Iniciar sesión</h3>
                     <br></br>
                 </div>
@@ -36,7 +37,7 @@ export default function UsuarioRegistro() {
                         </p>
                     </div>
                     </div>
-                    
+            </div>    
                  
             </div>
         </Fragment>
