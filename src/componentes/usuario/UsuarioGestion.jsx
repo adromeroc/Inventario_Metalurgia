@@ -5,12 +5,14 @@ export default function UsuarioGestion() {
     return (
         <Fragment>
             <div className="container">
+            <br></br>
+            <br></br> 
+                <h1>Gestión de Usuarios</h1>   
                 <div className="row align-items-start"></div>
                     <div className="col">
                         <div className="mb-3">
                         <br></br>
-                        <br></br>
-                            <h5>Información personal</h5>
+                            <h3>Información personal</h3>
                             <br></br>
                         <div className="mb-3">
                             <label for="sexi" className="form-label">Sexo:</label>
@@ -62,7 +64,7 @@ export default function UsuarioGestion() {
                             <br></br>
                         <form action="">
                         <div>
-                        <h5>Datos para ingreso al Sistema</h5>
+                        <h3>Datos de Ingreso al Sistema</h3>
                         <br></br>
                             <div className="input-group input-group-sm mb-3">
                                 <span className="input-group-text" id="inputGroup-sizing-sm">Usuario</span>

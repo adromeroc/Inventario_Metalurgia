@@ -1,45 +1,49 @@
 import { Fragment } from "react";
 import DefaultContentMensaje from "../DefaultContentMensaje";
 import logo from '../../image/Foto.2.jpg';
+// import './App.css';
 
+    
 export default function UsuarioRegistro() {
     return (
         <Fragment>
-            <div className="text-center">
-            <div className="container-">
-                <br></br>
-                <br></br>
-                <div>
-                    <img className="mb-4" alt="" width="300" height="188" src={logo} />
-                </div>
-                <div className="text-center">  
-                    <h3>Iniciar sesión</h3>
-                    <br></br>
-                </div>
-                    <div className="form-group">
-                        <label>Email</label>
-                        <input type="email" className="w-50 form-control" placeholder="Ingresar email"/>
-                    </div>
-                    <div className="form-group">
-                        <label>Contraseña</label>
-                        <input type="password" className="w-50 form-control" placeholder="Ingresar password"/>
-                    </div>
-                    <br></br>
-                    <div className="text-center">
-                    <div className="form-group">
-                        <div className="custom-control custom-checkbox">
-                            <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                            <label className="custom-control-label" htmlFor="customCheck1"> Recordarme</label>
-                        </div>
-                        <br></br>
-                        <button type="submit" className="w-50 btn btn-lg btn-primary">Entrar</button>
-                        <p className="forgot-password text-right">
-                        </p>
-                    </div>
-                    </div>
-            </div>    
-                 
-            </div>
-        </Fragment>
-    )
+			<div className="container h-100">
+				<div className="d-flex justify-content-center h-100">
+					<div className="user_card">
+						<div className="d-flex justify-content-center">
+							<div className="brand_logo_container">
+                                <img className="mb-5" alt="Logo" width="330" height="210" ss="brand_logo" src={logo} />
+							</div>
+						</div>
+						<div className="d-flex justify-content-center form_container">
+							<form>
+								<div className="input-group mb-3">
+									<div className="input-group-append">
+										<span className="input-group-text"><i className="fas fa-user"></i></span>
+									</div>
+									<input type="email" name="" className="form-control input_user" value="" placeholder="Email"/>
+								</div>
+								<div className="input-group mb-2">
+									<div className="input-group-append">
+										<span className="input-group-text"><i className="fas fa-key"></i></span>
+									</div>
+									<input type="password" name="" className="form-control input_pass" value="" placeholder="Contraseña"/>
+								</div>
+								<div className="form-group">
+									<div className="custom-control custom-checkbox">
+										<input type="checkbox" className="custom-control-input" id="customControlInline"/>
+										<label className="custom-control-label" for="customControlInline">Recuerdame</label>
+									</div>
+								</div>
+									<div className="d-flex justify-content-center mt-3 login_container">
+							<button type="button" name="button" className="btn login_btn">Login</button>
+						    </div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</Fragment>
+	)
 }
