@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import DefaultContentMensaje from "../DefaultContentMensaje";
 
 export default function MateriaPrimaLista() {
+    const listado = JSON.parse (localStorage.getItem("listadoMP")) || [];
     return (
         <Fragment>
            <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -26,51 +27,24 @@ export default function MateriaPrimaLista() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Acero al Carbón</td>
-                <td>20 TON</td>
-                <td>$20.000</td>
-                <td>
-                  <form action="" method="post">
-                    <input type="submit" value="Editar" className="btn btn-primary" />
-                  </form>
-                </td>
-                <td>
-                  <form action="" method="post">
-                    <input type="submit" value="Eliminar" className="btn btn-danger" />
-                  </form>
-                </td>
-              </tr>
-              <tr>
-                <td>Hierro Fundido</td>
-                <td>3 TON</td>
-                <td>$30.000</td>
-                <td>
-                  <form action="" method="post">
-                    <input type="submit" value="Editar" className="btn btn-primary" />
-                  </form>
-                </td>
-                <td>
-                  <form action="" method="post">
-                    <input type="submit" value="Eliminar" className="btn btn-danger" />
-                  </form>
-                </td>
-              </tr>
-              <tr>
-                <td>Acero Inoxidable</td>
-                <td>4 TON</td>
-                <td>$40.000</td>
-                <td>
-                  <form action="" method="post">
-                    <input type="submit" value="Editar" className="btn btn-primary" />
-                  </form>
-                </td>
-                <td>
-                  <form action="" method="post">
-                    <input type="submit" value="Eliminar" className="btn btn-danger" />
-                  </form>
-                </td>
-              </tr>
+                {
+                    listado.map ((p) => <tr>
+                        <td>{p.des}</td>
+                        <td>{p.can}</td>
+                        <td>{p.valor}</td>
+                        <td>
+                        <form action="" method="post">
+                            <input type="submit" value="Editar" className="btn btn-primary" />
+                        </form>
+                        </td>
+                        <td>
+                        <form action="" method="post">
+                            <input type="submit" value="Eliminar" className="btn btn-danger" />
+                        </form>
+                        </td>
+
+                        </tr>)
+                }
             </tbody>
           </table>
         </div>
