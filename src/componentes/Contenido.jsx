@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 export default function Contenido() {
   return (
     <Fragment>
-        <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 className="h2">Opciones de Pantalla</h1>
           <form className="d-flex" action="/prueba" method="POST">
             <input type="text" className="form-control me-2" name="buscarEvaluacion" placeholder="Buscar" />
