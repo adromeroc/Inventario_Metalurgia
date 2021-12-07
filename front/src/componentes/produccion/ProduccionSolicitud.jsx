@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import DefaultContentMensaje from "../DefaultContentMensaje";
+//import DefaultContentMensaje from "../DefaultContentMensaje";
 
 export default function ProduccionSolicitud() {
     return (

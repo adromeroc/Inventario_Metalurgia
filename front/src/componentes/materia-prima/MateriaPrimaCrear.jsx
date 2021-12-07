@@ -1,6 +1,6 @@
 import { Fragment, useRef, useState } from "react";
 
-import DefaultContentMensaje from "../DefaultContentMensaje";
+//import DefaultContentMensaje from "../DefaultContentMensaje";
 
 export default function MateriaPrimaCrear() {
     let listado; 
@@ -65,13 +65,19 @@ export default function MateriaPrimaCrear() {
                         
                         <div className="form-group">
                             <label>Unidad de medida</label>
-                            <input ref={undRef} type="descripcion" className="w-50 form-control" placeholder=""/>
+                            {/* </div><input ref={undRef} type="descripcion" className="w-50 form-control" placeholder=""/> */}
+                            <input ref={undRef} className="w-50 form-control" list="listUnidades" placeholder="" required=""/>
+                                <datalist id="listUnidades">
+                                    <option value="Paquete"></option>
+                                    <option value="Unidad"></option>
+                                    <option value="Peso"></option>
+                                </datalist>
                             <br></br>
                         </div>
 
                         <div className="form-group">
                             <label>Valor</label>
-                            <input ref ={valorRef} type="descripcion" className="w-50 form-control" placeholder="$"/>
+                            <input ref ={valorRef} type="number" className="w-50 form-control" placeholder="$"/>
                             <br></br>
                         </div>
                        

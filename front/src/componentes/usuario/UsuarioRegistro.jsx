@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import DefaultContentMensaje from "../DefaultContentMensaje";
+//import DefaultContentMensaje from "../DefaultContentMensaje";
 import logo from '../../image/Foto.2.jpg';
 // import './App.css';
 

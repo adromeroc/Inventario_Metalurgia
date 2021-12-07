@@ -1,11 +1,11 @@
 import { Fragment } from "react";
-import DefaultContentMensaje from "../DefaultContentMensaje";
+//import DefaultContentMensaje from "../DefaultContentMensaje";
 
-export default function ProduccionSeguimiento() {
+export default function ProduccionOrden() {
     return (
         <Fragment>
             <div className="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h2>Seguimiento de Producción</h2>
+                <h2>Crear Orden de Producción</h2>
                 <form className="d-flex" action="" method="POST">
                     <input type="text" className="form-control me-2" name="" placeholder="Buscar Productos" />
                     <button className="btn btn-outline-success" type="submit">Buscar</button>
@@ -20,53 +20,50 @@ export default function ProduccionSeguimiento() {
                         <thead>
                         <tr>
                             <th scope="col">Productos</th>
-                            <th scope="col">Cantidades Solicitadas</th>
-                            <th scope="col">Acción</th>
-                            <th scope="col">Motivo</th>
+                            <th scope="col">Cantidad a Producir</th>
+                            <th scope="col" className="text-center">Acción</th>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Producto 1</td>
-                                <td>150</td>
                                 <td>
-                                    <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Cancelar" className="btn btn-danger" />
-                                    </form>
+                                    <input type="number" className="form-control me-6" name="cantProductos" placeholder="Numero de productos a producir" />
                                 </td>
                                 <td>
-                                    <input type="text" className="form-control me-6" name="inputMotivo" placeholder="¿Porque desea cancelar la producción?" />
+                                    <form className="text-center" action="" method="post">
+                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
+                                    </form>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Producto 2</td>
-                                <td>2000</td>
+                            <td>Producto 2</td>
                                 <td>
-                                    <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Cancelar" className="btn btn-danger" />
-                                    </form>
+                                    <input type="number" className="form-control me-6" name="cantProductos" placeholder="Numero de productos a producir" />
                                 </td>
                                 <td>
-                                    <input type="text" className="form-control me-6" name="inputMotivo" placeholder="¿Porque desea cancelar la producción?" />
+                                    <form className="text-center" action="" method="post">
+                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
+                                    </form>
                                 </td>
                             </tr>
                             <tr>
                             <td>Producto 3</td>
-                                <td>5000</td>
                                 <td>
-                                    <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Cancelar" className="btn btn-danger" />
-                                    </form>
+                                    <input type="number" className="form-control me-6" name="cantProductos" placeholder="Numero de productos a producir" />
                                 </td>
                                 <td>
-                                    <input type="text" className="form-control me-6" name="inputMotivo" placeholder="¿Porque desea cancelar la producción?" />
+                                    <form className="text-center" action="" method="post">
+                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
+                                    </form>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     </div>
                 </div>
-            </div>
+                </div>
+                
         </Fragment>
     )
 }
