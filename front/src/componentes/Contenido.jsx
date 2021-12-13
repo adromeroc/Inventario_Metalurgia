@@ -4,7 +4,6 @@ import { Container } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Encabezado from "./Encabezado";
 import Menu from "./Menu";
-import UsuarioRegistro from "./usuario/UsuarioRegistro";
 import UsuarioGestion from "./usuario/UsuarioGestion";
 import MateriaPrimaCrear from "./materia-prima/MateriaPrimaCrear";
 import MateriaPrimaLista from "./materia-prima/MateriaPrimaLista";
@@ -19,7 +18,7 @@ import ListaUsuario from "./usuario/ListaUsuario";
 
 
 export default function Contenido() {
-  const [compDinamico, setCompDinamico ] = useState(<UsuarioRegistro />);
+  const [compDinamico, setCompDinamico ] = useState(<ListaUsuario />);
   
   const onOptionClicked = function (evt) {
     evt.preventDefault();
