@@ -9,7 +9,7 @@ export default function Encabezado() {
             <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
                 <div>
                     <img className="mb-auto" alt="" width="90" height="70" src={logo} />
-                    <a className="fs-4 navbar-brand bg-dark col-md-3 col-lg-2 me-0 px-3" href="/">{CONFIG.NOMBRE_EMPRESA}</a>
+                    <a className="fs-4 navbar-brand bg-dark col-md-3 col-lg-2 me-0 px-3">{CONFIG.NOMBRE_EMPRESA}</a>
                 </div>
                 <ul className="nav nav-pills">
                 </ul>
