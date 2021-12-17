@@ -88,8 +88,6 @@ export default function MateriaPrimaCrear() {
                                     <button className="btn btn-primary" type="button">Editar</button>
                                 </div>
                             </div>
-                        
-
         </Fragment>
     )
 }
