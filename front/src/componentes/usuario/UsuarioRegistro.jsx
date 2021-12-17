@@ -19,7 +19,7 @@ export default function UsuarioRegistro() {
         <Fragment>
 		{opc ? <Contenido />:
 			<div className="container h-100">
-				<div className="d-flex justify-content-center h-100">
+				<div className="d-flex justify-content-center h-100" style={{"margin-top": "8em"}}>
 					<div className="user_card">
 						<div className="brand_logo_container">
                         	<img width="330" height="210" src={logo} />
