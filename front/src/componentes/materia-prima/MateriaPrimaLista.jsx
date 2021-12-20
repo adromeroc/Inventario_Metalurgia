@@ -1,8 +1,19 @@
+import React, { useEffect, useState } from "react";
 import { Fragment } from "react";
 //import DefaultContentMensaje from "../DefaultContentMensaje";
 
 export default function MateriaPrimaLista() {
-    const listado = JSON.parse (localStorage.getItem("listadoMP")) || [];
+      const [listado, setListado] = useState([]);
+      useEffect(() => {
+        fetch("http://localhost:8080/materia_prima/listar", {
+            method: "GET"
+        }).then(res => res.json())
+            .then(res => {
+                if (res.estado === "ok")
+                    setListado(res.data);
+            })
+    }, [])
+    
     return (
         <Fragment>
            <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
