@@ -1,7 +1,19 @@
 import { Fragment } from "react";
-//import DefaultContentMensaje from "../DefaultContentMensaje";
+import { useEffect, useState } from "react";
 
 export default function ProduccionOrden() {
+    
+    const [listado, setListado] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:8080/producto/produccion", {
+            method: "GET"
+        }).then(res => res.json())
+            .then(res => {
+                if (res.estado === "ok")
+                    setListado(res.data);
+            })
+    }, []);
+
     return (
         <Fragment>
             <div className="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -24,10 +36,9 @@ export default function ProduccionOrden() {
                             <th scope="col" className="text-center">Acción</th>
                         </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Producto 1</td>
-                                <td>
+                        <tbody>{
+                            listado.map(p => <tr><td>{p.nombre}</td>
+                            <td>
                                     <input type="number" className="form-control me-6" name="cantProductos" placeholder="Numero de productos a producir" />
                                 </td>
                                 <td>
@@ -35,29 +46,9 @@ export default function ProduccionOrden() {
                                         <input type="submit" value="Solicitar" className="btn btn-primary" />
                                     </form>
                                 </td>
-                            </tr>
-                            <tr>
-                            <td>Producto 2</td>
-                                <td>
-                                    <input type="number" className="form-control me-6" name="cantProductos" placeholder="Numero de productos a producir" />
-                                </td>
-                                <td>
-                                    <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
-                                    </form>
-                                </td>
-                            </tr>
-                            <tr>
-                            <td>Producto 3</td>
-                                <td>
-                                    <input type="number" className="form-control me-6" name="cantProductos" placeholder="Numero de productos a producir" />
-                                </td>
-                                <td>
-                                    <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Solicitar" className="btn btn-primary" />
-                                    </form>
-                                </td>
-                            </tr>
+                                </tr>)
+                            }
+                            
                         </tbody>
                     </table>
                     </div>
