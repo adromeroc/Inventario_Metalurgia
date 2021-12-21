@@ -1,26 +1,46 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Fragment } from "react";
 
 
 export default function ProductoLista() {
     const [listado, setListado] = useState([]);
+    const nomProdRef = useRef();
+    const [filtrado, setFiltrado] = useState([]);
+    const [nombre, setNombre] = useState("");
+    
     useEffect(() => {
-        fetch("http://localhost:8080/producto/listar", {
-            method: "GET"
-        }).then(res => res.json())
-            .then(res => {
-                if (res.estado === "ok")
-                    setListado(res.data);
-            })
-    }, [])
+             fetch("http://localhost:8080/producto/listar", {
+                 method: "GET"
+             }).then(res => res.json())
+                
+                 .then(res => {
+                    if (res.estado === "ok")
+                         setListado(res.data);
+                         setFiltrado(res.data);
+                 })
+         }, []);
 
+         
+    const handleChange=(event)=> {
+        setNombre(event.target.value);    
+        const aux = listado.filter((producto) =>{
+            if (producto.nombre.includes(nombre) || nombre === "") {
+            // if ((producto.nombre.includes(nombre) || nombre === "") && producto.estado ==="PENDING") {
+                console.log("Estado:",producto.estado);
+                return producto;
+            }
+        })
+        setFiltrado(aux);
+    }
+    
+    
     return (
         <Fragment>
             <div className="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h2>Listar Producto</h2>
-                <form className="d-flex" action="" method="POST">
-                    <input type="text" className="form-control me-2" name="" placeholder="Buscar Productos" />
-                    <button className="btn btn-outline-success" type="submit">Buscar</button>
+                <form className="d-flex" method="POST">
+                    <input ref={nomProdRef} value={nombre} onChange={handleChange} type="text" className="form-control me-2" name="" placeholder="Buscar Productos" />
+                    {/* <button className="btn btn-outline-success" type="button" onClick={listar} >Buscar</button> */}
                 </form>
                 <div></div>
             </div>
@@ -38,16 +58,16 @@ export default function ProductoLista() {
                             </thead>
                             <tbody>
                             {
-                                listado.map(p => <tr><td>{p.nombre}</td>
+                                filtrado.map(p => <tr key={p._id}><td>{p.nombre}</td>
                                 <td>{p.valor}</td>
                                 <td>{p.estado}</td>
                                 <td>
                                     <form className="text-center" action="" method="post">
-                                        <input type="submit" value="Editar Producto" className="btn btn-success" />
+                                        <input type="submit" value="Editar Producto" className="btn btn-success" disabled/>
                                         &nbsp;
-                                        <input type="submit" value="Agregar Materia" className="btn btn-success" />
+                                        <input type="submit" value="Agregar Materia" className="btn btn-success" disabled/>
                                         &nbsp;
-                                        <input type="submit" value="Eliminar Producto" className="btn btn-danger" />
+                                        <input type="submit" value="Eliminar Producto" className="btn btn-danger" disabled/>
                                     </form>
                                 </td>
                                 </tr>)
